@@ -1,5 +1,5 @@
 from salesforce_reporting import Connection, ReportParser
-import pandas as pd 
+import pandas as pd
 import os
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -37,11 +37,29 @@ def load_report(report_id, sf):
 def shorten_site_names(df):
     df.loc[:,'Site'] = df.loc[:,'Site'].str.replace('College Track ', "")
     df.loc[:,'Site'] = df.loc[:,'Site'].str.replace('at ', "")
-    
-    return df 
+
+    return df
 
 def shorten_region_names(df):
     df.loc[:,'Region'] = df.loc[:,'Region'].str.replace('College Track ', "")
     df.loc[:,'Region'] = df.loc[:,'Region'].str.replace(' Region', "")
-    
+
+    return df
+
+def clean_column_names(df):
+
+    df.columns = (
+        df.columns.str
+        .strip().str.lower()
+        .str.replace(" ", "_")
+        .str.replace("(", "")
+        .str.replace(")", "")
+        .str.replace("-", "_")
+        .str.replace(":", "")
+        .str.replace("<", "less_")
+        .str.replace("=", "")
+        .str.replace(".", "")
+
+    )
+
     return df
