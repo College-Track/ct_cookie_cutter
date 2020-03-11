@@ -1,3 +1,10 @@
+# {{cookiecutter.project_name}}
+
+
+==============================
+
+{{cookiecutter.description}}
+
 ### Prerequisites
 
 ```
@@ -42,10 +49,10 @@ By default, all .ipynb files are synced to github as .md files using Jupytext. T
 ```
 jupytext --set-formats ipynb,md *.md 
 
-```# {{cookiecutter.project_name}}
-==============================
+```
 
-{{cookiecutter.description}}
+
+
 
 ## Project Organization
 ------------
