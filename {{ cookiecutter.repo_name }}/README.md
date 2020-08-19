@@ -9,27 +9,20 @@
 
 ```
 python 3.7
-conda 4.7.12
 ```
 
 
 ### Installing
-Clone the repository and switch to the created ddt directory
+
+Create virtual environment for package management
 ```
-git clone https://github.com/College-Track/{repository_name}
-cd {repository_name}
+python3 -m venv venv
+source venv/bin/activate
 ```
 
-
-* For any time after initial install just run the second command
+Install required python packages
 ```
-conda env create -f environment.yml
-conda activate env
-```
-
-Due to the package for downloading salesforce data being unmaintained you have to manually install that packages from a github repo
-```
-pip install git+https://github.com/jbakerr/salesforce-reporting@1b8f4777281bb95892325168328a65581121ad9c#egg=salesforce_reporting
+pip install -r requirements.txt
 ```
 
 Copy the example .env file
@@ -51,6 +44,10 @@ jupytext --set-formats ipynb,md *.md
 
 ```
 
+Generally, to run a script, make sure you are running it from the top top level directory, for example to run the data prep script:
+```
+python src/1_data_prep.py 
+```
 
 
 
@@ -65,17 +62,15 @@ jupytext --set-formats ipynb,md *.md
     │   └── raw            <- The original, immutable data dump.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    ├── src                <- Contains all python code
+    │   ├── 1_data_prep.py <- Initial script to load and prep data
+    │   ├── 2_analysis.py  <- If needed, script to run analysis or run more complicated processes
+    │   └── helpers.py     <- Contains helper functions that are used in main scripts
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
-    ├── 1-Data_Prep.ipynb  <- The notebook where data is prepped and loaded
-    ├── 2-EDA.ipynb        <- The notebook where any analysis is done.
-    ├── Report.ipynb       <- The notebook where a report, to be exported, is published 
-    ├── helpers.py         <- Any additional functions used, also contains helpful scripts that are frequently used.
+    ├── notebooks          <- any Jupyter notebooks used for developing ideas
+
     
 --------
-
-
-
-
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
