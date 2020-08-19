@@ -25,6 +25,11 @@ Install required python packages
 pip install -r requirements.txt
 ```
 
+After installing the required packages, if you resave the requirements.txt file it will store which version of the CT_Snippets package being used. 
+```
+pip freeze > requirements.txt
+```
+
 Copy the example .env file
 ```
 cp .env.example .env
