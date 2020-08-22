@@ -6,6 +6,8 @@ from ct_snippets.load_sf_class import SF_SOQL, SF_Report
 from ct_snippets.sf_bulk import sf_bulk, sf_bulk_handler, generate_data_dict
 from reportforce import Reportforce
 import numpy as np
+import soql_queries as soql
+import variables
 
 
 load_dotenv()
