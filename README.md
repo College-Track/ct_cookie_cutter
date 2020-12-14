@@ -53,3 +53,45 @@ The directory structure of your new project looks like this:
     ├── notebooks           <- any Jupyter notebooks used for developing ideas
 ```
 
+
+### Installing Required Files
+
+Create virtual environment for package management
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install required python packages
+```
+pip install -r requirements.txt
+```
+
+After installing the required packages, if you resave the requirements.txt file it will store which version of the CT_Snippets package being used. 
+```
+pip freeze > requirements.txt
+```
+
+Copy the example .env file
+```
+cp .env.example .env
+```
+
+Make sure you update the following values in the newly created .env
+```
+SF_TOKEN=<your salesforce token>
+SF_USERNAME=<your salesforce username>
+SF_PASS=<your salesforce password>
+```
+
+By default, all .ipynb files are synced to github as .md files using Jupytext. This allows easier version control and also reduces the file size and sensitive data on Github. To convert all md files back into .ipynb run the following command:
+
+```
+jupytext --set-formats ipynb,md *.md 
+
+```
+
+Generally, to run a script, make sure you are running it from the top top level directory, for example to run the data prep script:
+```
+python src/1_data_prep.py 
+```
