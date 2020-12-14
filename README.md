@@ -17,7 +17,7 @@ $ pip install cookiecutter
 
 
 
-### To start a new project, run:
+### To start a new project, run and answer the resulting prompts:
 ------------
 
     cookiecutter https://github.com/College-Track/cookieCutterSimple
