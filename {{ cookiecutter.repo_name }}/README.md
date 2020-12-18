@@ -32,7 +32,7 @@ pip freeze > requirements.txt
 
 Copy the example .env file
 ```
-cp .env.example .env
+cp .envexample .env
 ```
 
 Make sure you update the following values in the newly created .env
