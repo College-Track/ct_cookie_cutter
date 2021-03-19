@@ -20,7 +20,8 @@ $ pip install cookiecutter
 ### To start a new project, run and answer the resulting prompts:
 ------------
 
-    cookiecutter https://github.com/College-Track/cookieCutterSimple
+    cookiecutter https://github.com/College-Track/ct_cookie_cutter
+
 
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
