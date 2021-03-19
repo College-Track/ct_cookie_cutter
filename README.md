@@ -3,7 +3,7 @@
 _A logical, reasonably standardized, but flexible project structure for doing and sharing College Track work._
 
 
-#### [Project homepage](https://github.com/College-Track/cookieCutterSimple)
+#### [Project homepage](https://github.com/College-Track/ct_cookie_cutter)
 
 
 ### Requirements to use the cookiecutter template:
