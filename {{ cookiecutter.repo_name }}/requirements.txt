@@ -12,7 +12,7 @@ cffi==1.14.2
 chardet==3.0.4
 click==7.1.2
 cryptography==3.0
--e git+https://github.com/College-Track/ct_snippets.git#egg=ct_snippets
+ct_snippets==0.1
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
